@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className="antialiased scrollbar-hide overflow-hidden w-full h-full bg-cover bg-no-repeat bg-fixed bg-center"
+        className="antialiased scrollbar-hide overflow-hidden bg-black w-full h-full bg-cover bg-no-repeat bg-fixed bg-center"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
         {/* Navbar */}
