@@ -1,18 +1,12 @@
-'use client'
-import { useState } from "react";
-import Footer from "@/components/home-page/Footer";
 import "./globals.css";
-import Navbar from "@/components/common/Navbar";
-import History from "@/components/common/History";
 
+export const metadata = {
+  title: "Voyex",
+  description:
+    "Voyex is the ultimate superapp for discovering AI tools and building custom workflows tailored to your needs. Effortlessly find, use, and query the right tools to create your own mini agency by simply describing your use case.",
+};
 
 export default function RootLayout({ children }) {
-  const [isHistoryVisible, setIsHistoryVisible] = useState(false);
-
-  const toggleHistoryVisibility = () => {
-    setIsHistoryVisible((prev) => !prev);
-  };
-
   return (
     <html lang="en">
       <head>
@@ -28,16 +22,10 @@ export default function RootLayout({ children }) {
         className="antialiased bg-black bg-[url('/stars.svg.svg')] w-full bg-cover bg-no-repeat bg-fixed h-full bg-center relative items-center justify-center"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
-        <div className="flex w-full h-full items-center">
-          {/* Pass toggle function and state to Navbar */}
-          <Navbar
-            toggleHistoryVisibility={toggleHistoryVisibility}
-            isHistoryVisible={isHistoryVisible}
-          />
-          {/* Conditionally render History */}
-          {isHistoryVisible && <History />}
-          <main className="relative h-full w-full">{children}</main>
-        </div>
+      <div className="flex w-full h-full items-center">
+      <main className="relative h-full w-full">{children}
+      </main>
+    </div>
       </body>
     </html>
   );

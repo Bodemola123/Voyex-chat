@@ -29,7 +29,7 @@ const History = () => {
       </div>
       <div className=''></div>
       <div></div>
-      <button className='flex flex-row py-4 px-6 gap-4 items-center justify-center'>
+      <button className='flex flex-row py-4 px-6 gap-4 items-start justify-start'>
         <Image src={'/IconContainer.svg'} alt='icon' width={40} height={40}/>
         <div className='flex flex-col gap-2 items-start'>
           <p className='text-base text-[#f4f4f4] '>Upgrade Plan</p>

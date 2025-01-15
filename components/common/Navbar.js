@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 import { HiOutlineHome } from 'react-icons/hi';
 import { LuClipboardList, LuLockKeyhole, LuSettings, LuShoppingCart } from 'react-icons/lu';
@@ -17,43 +18,55 @@ const Navbar = ({ toggleHistoryVisibility, isHistoryVisible }) => {
             {isHistoryVisible ? 'V' : 'V'}
           </p>
         </button>
-        {/* Navigation Buttons */}
+        {/* Navigation Links */}
         <div className="flex flex-col justify-center items-center gap-4">
-          {/* Home Button */}
+          {/* Home Link */}
           <div className="relative group">
-            <button className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]">
+            <Link
+              href="/"
+              className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]"
+            >
               <HiOutlineHome className="text-[20px] text-[#C088fb] group-hover:text-[#f4f4f4]" />
-            </button>
+            </Link>
             <span className="absolute top-full -mt-2 left-full text-sm text-[#ffffff] text-center font-medium bg-[#131314] px-2.5 py-1.5 rounded-[13px] flex gap-2.5 opacity-0 group-hover:opacity-100 transition-opacity">
               Home
             </span>
           </div>
 
-          {/* Templates Button */}
+          {/* Templates Link */}
           <div className="relative group">
-            <button className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]">
+            <Link
+              href="#"
+              className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]"
+            >
               <LuClipboardList className="text-[20px] text-[#C088fb] group-hover:text-[#f4f4f4]" />
-            </button>
+            </Link>
             <span className="absolute top-full text-sm -mt-2 left-full text-[#ffffff] text-center font-medium bg-[#131314] px-2.5 py-1.5 rounded-[13px] flex gap-2.5 opacity-0 group-hover:opacity-100 transition-opacity">
               Templates
             </span>
           </div>
 
-          {/* Galactimart Button */}
+          {/* Galactimart Link */}
           <div className="relative group">
-            <button className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]">
+            <Link
+              href="#"
+              className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]"
+            >
               <LuShoppingCart className="text-[20px] text-[#C088fb] group-hover:text-[#f4f4f4]" />
-            </button>
+            </Link>
             <span className="absolute top-full text-sm -mt-2 left-full text-[#ffffff] text-center font-medium bg-[#131314] px-2.5 py-1.5 rounded-[13px] flex gap-2.5 opacity-0 group-hover:opacity-100 transition-opacity">
               Galactimart
             </span>
           </div>
 
-          {/* Workspace Button */}
+          {/* Workspace Link */}
           <div className="relative group">
-            <button className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]">
+            <Link
+              href="#"
+              className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]"
+            >
               <LuLockKeyhole className="text-[20px] text-[#C088fb] group-hover:text-[#f4f4f4]" />
-            </button>
+            </Link>
             <span className="absolute top-full text-sm -mt-2 left-full text-[#ffffff] text-center font-medium bg-[#131314] px-2.5 py-1.5 rounded-[13px] flex gap-2.5 opacity-0 group-hover:opacity-100 transition-opacity">
               Workspace
             </span>
@@ -63,11 +76,14 @@ const Navbar = ({ toggleHistoryVisibility, isHistoryVisible }) => {
 
       {/* Bottom Section */}
       <div className="flex flex-col gap-4 justify-center items-center">
-        {/* Settings Button */}
+        {/* Settings Link */}
         <div className="relative group">
-          <button className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]">
+          <Link
+            href="#"
+            className="p-2 flex justify-center items-center gap-2.5 rounded-[123px] hover:bg-[#C088fb]"
+          >
             <LuSettings className="text-[20px] text-[#f4f4f4]" />
-          </button>
+          </Link>
           <span className="absolute top-full text-sm -mt-2 left-full text-[#ffffff] text-center font-medium bg-[#131314] px-2.5 py-1.5 rounded-[13px] flex gap-2.5 opacity-0 group-hover:opacity-100 transition-opacity">
             Settings
           </span>
